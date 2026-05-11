@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app-wrap">
+  <div class="app-header">
+    <div class="app-title">Weather</div>
+    <div class="app-subtitle">Real-time conditions powered by OpenWeatherMap</div>
+  </div>
+
+  <div class="search-row">
+    <input type="text" id="wa-input" placeholder="Search city — e.g. Mangalore, Tokyo…" />
+    <div class="unit-toggle">
+      <button class="unit-btn active" id="btn-c" onclick="setUnit('C')">°C</button>
+      <button class="unit-btn" id="btn-f" onclick="setUnit('F')">°F</button>
+    </div>
+    <button class="btn btn-primary" onclick="searchWeather()">Search</button>
+    <button class="btn" onclick="getLocation()" title="Use my location">📍</button>
+  </div>
+
+  <div class="error-bar" id="wa-error"></div>
+
+  <div id="wa-content">
+    <div class="idle-msg">
+      <div class="idle-icon">🌤️</div>
+      Enter a city name or tap 📍 to use your current location.
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
